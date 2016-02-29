@@ -1,0 +1,4 @@
+# Usage: sudo docker build -t reg.docker.alibaba-inc.com/yhr-dev:centos7 -f your_docker_buildfile your_file_abspath
+FROM centos:7
+RUN yum install -y vim wget screen git libtool gettext-devel.x86_64 automake gcc-c++ git libcurl-devel libxml2-devel make openssl-devel valgrind ruby ruby-devel
+RUN cd && wget https://github.com/hryang/dev_config/raw/master/.screenrc --no-check-certificate && wget https://github.com/hryang/dev_config/raw/master/vim.tar --no-check-certificate && tar xvf vim.tar && rm -rf vim.tar && rm -rf .bashrc && wget https://github.com/hryang/dev_config/raw/master/.bashrc --no-check-certificate
