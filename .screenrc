@@ -1,0 +1,18 @@
+vbell off
+startup_message off
+
+# bind ` key as the control key.
+escape ``
+
+# set the screen roll back to 1024 line.
+defscrollback 65536
+
+# Wait until at most 5 seconds when screen freezing.
+defnonblock 5
+
+altscreen on
+
+# show window list and clock on the bottom line.
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rY}%n %t%{-}%+w %=%{..G} %H(%l) %{..Y} %Y/%m/%d %c:%s "
