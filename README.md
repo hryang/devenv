@@ -21,7 +21,7 @@
    ```
 3. 使用 powerlevel9k 主题
    ```shell
-   $git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+   $git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k --depth=1
    $echo 'ZSH_THEME="powerlevel9k/powerlevel9k"' >> ~/.zshrc
    $source ~/.zshrc
    ```
