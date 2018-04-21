@@ -61,8 +61,8 @@
 
 **Config Sync Setting**
 
-* gist token: `092a92051b09156cd1681ed0f91f44de2a000e58`
-* gist id: `4b068dce2830f4c016a74041174f2207`
+* gist token: `5c8be8cf5edf0fb942737681595a45a933c6acac`
+* gist id: `75b3a7070491cc57fa95116a695bbdc2`
 
 ## Docker
 
