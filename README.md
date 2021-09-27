@@ -173,3 +173,16 @@ Repo 中有一份当前 tmux 配置的备份。
    hardstatus string "%{.bW}%-w%{.rY}%n %t%{-}%+w %=%{..G} %H(%l) %{..Y} %Y/%m/%d %c:%s "
    ```
 2. 关闭 zsh 的自动更改标签命：在 .zshrc 中加入 `DISABLE_AUTO_TITLE="true"`
+
+## Go
+
+### 配置代理
+
+在 `~/.zshrc` 中设置 GOProxy 环境变量
+```shell
+export GOPROXY=https://goproxy.cn,direct
+```
+
+在 vscode 中设置 GOProxy 环境变量，这样通过 vscode 安装 gopls 等相关工具也可以使用代理。在 vscode go 插件设置中找到 "Tools Env Vars" 选项，点击 "在 setting.json 中编辑" 链接。输入 `"GOPROXY": "https://goproxy.cn,direct"`。
+
+
