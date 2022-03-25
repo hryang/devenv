@@ -12,6 +12,13 @@ brew 等工具要求用户不能是 root，因此我们需要为机器添加普�
    ```
 3. 修改 sudo 密码输入间隔
    在 /etc/sudoers 中增加 `Defaults:username timestamp_timeout=20`，其中 username 是用户名，20 是间隔时间，单位分钟。
+4. 取消 sudo secure_path 配置
+   从安全角度考虑，sudo 只从配置的 path 中寻找命令。将 /etc/sudoers 设置注释掉，这样通过 brew 或者 go 安装的命令都可以被找到。
+   ```shell
+   #Defaults       env_reset
+   #Defaults       mail_badpass
+   #Defaults       secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+   ```
 
 ## 安装字体
 
@@ -149,6 +156,14 @@ cp .tmux/.tmux.conf.local .
 
 Repo 中有一份当前 tmux 配置的备份。
 
+### 在 VSCode 中的 terminal 开启鼠标选择和复制内容
+
+在 tmux 中开启鼠标选择内容：`set -g mouse-mode on`
+
+在 VSCode 中设置 `"terminal.integrated.macOptionClickForcesSelection": true`
+
+> Reference: https://github.com/microsoft/vscode/issues/86829
+
 ## Screen
 
 1. `.screenrc` 中的配置如下：
@@ -184,5 +199,12 @@ export GOPROXY=https://goproxy.cn,direct
 ```
 
 在 vscode 中设置 GOProxy 环境变量，这样通过 vscode 安装 gopls 等相关工具也可以使用代理。在 vscode go 插件设置中找到 "Tools Env Vars" 选项，点击 "在 setting.json 中编辑" 链接。输入 `"GOPROXY": "https://goproxy.cn,direct"`。
+
+### Debug
+
+使用 dlv 调试 go 程序时，遇到报错，提示需要 gcc-5。通过 brew 安装。
+```shell
+brew install gcc@5
+```
 
 
