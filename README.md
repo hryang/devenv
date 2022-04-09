@@ -52,7 +52,7 @@ brew 作为 mac 和 linux 下的软件包管理器，体验非常好。由于网
 
 终端中输入以下命令设置环境变量。
 ```shell
-if [[ "$(uname -s)" == "Linux" ]]; then BREW_TYPE="linuxbrew"; else BREW_TYPE="homebrew"; fi
+if [[ "$(uname -s)" == "Linux" ]]; then BREW_TYPE="homebrew"; else BREW_TYPE="homebrew"; fi
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
 export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/${BREW_TYPE}-core.git"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/${BREW_TYPE}-bottles"
